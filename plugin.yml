@@ -1,0 +1,22 @@
+main: dev.QueueAmI.NameSearch.Main
+name: NameSearch
+version: 1.0
+author: QueueAmI
+description: Partial Match Username Searches
+commands:
+  namesearch:
+    description: Looks for any names that contain the specified string.
+    usage: /namesearch <string>
+    aliases: ns
+    permission: namesearch.namesearch
+    permission-message: You don't have the namesearch.namesearch permission.
+permissions:
+    namesearch.*:
+        description: Gives access to all namesearch commands
+        default: op
+        children:
+            namesearch.namesearch: true
+    namesearch.namesearch:
+        description: Gives access to the namesearch command
+        default: op
+   
